@@ -68,4 +68,20 @@ public class CustomListTest {
         });
     }
 
+    /**
+     * add 3 cities to the list
+     * check that the list has 3 cities in it
+     */
+    @Test
+    void testCountCities() {
+        list = MockCityList();
+        City city1 = new City("Yellowknife", "Northwest Territories");
+        City city2 = new City("Charlottetown", "Prince Edward Island");
+        City city3 = new City("Regina", "Saskatchewan");
+        list.addCity(city1);
+        list.addCity(city2);
+        list.addCity(city3);
+        assertEquals(3, list.countCities());
+    }
+
 }
